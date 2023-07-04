@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 const axios = Axios.create({
-	baseURL: "https://komorebi-production.onrender.com/",
+	baseURL: "https://komorebi-ecom-backend.onrender.com",
 });
 
 export default axios;

@@ -6,15 +6,21 @@ import { Elements } from "@stripe/react-stripe-js";
 import Text from "../../components/text";
 import { getCartTotal } from "../../helpers";
 
+// const stripePromise = loadStripe(
+// 	"pk_test_51Mg6UGSCB333o0lIZra1AOi4Z2ED7CJHOp9ThNQJjSaBQjm5sLnWv3HXCrNVaAt9Waf947lhmFHxfFnpIeijrrIP002SFfhEao"
+// );
+
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
+console.log(import.meta);
+console.log("stripePromise", JSON.stringify(stripePromise, null, 2));
 const Payment = () => {
 	const { cart, clientSecret } = useGlobalStore();
 
 	const options: StripeElementsOptions = {
 		clientSecret,
 	};
-
+	console.log("clientSecret", JSON.stringify(clientSecret, null, 2));
 	const cartTotal = getCartTotal(cart);
 
 	return (

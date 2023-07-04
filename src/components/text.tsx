@@ -53,7 +53,7 @@ const Text = ({
 	...props
 }: TextProps) => {
 	return (
-		<p className={clsx(variants[variant])} {...props}>
+		<p className={clsx(variants[variant], className)} {...props}>
 			{children}
 		</p>
 	);

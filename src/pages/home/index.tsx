@@ -34,14 +34,14 @@ const Home = () => {
 				className="absolute min-h-screen object-cover -top-[105px] -z-10 w-full"
 				src="https://res.cloudinary.com/dikpmkuiw/image/upload/v1681360256/komorebi-development/komorebi-img1_zcqdeh.png"
 			/>
-			<div className="mx-[50px] min-h-screen border-4 flex flex-col justify-end items-start pb-80">
+			<div className="mx-[50px] min-h-screen  flex flex-col justify-end items-start pb-80">
 				<Text className="" variant="heading-two">
 					HOODIE HEAVEN
 				</Text>
 				<Button
 					className="mt-7"
 					onClick={() => {
-						navigateToShop;
+						navigateToShop();
 					}}>
 					<span className="flex">
 						<Icon name="arrow-small-right" />

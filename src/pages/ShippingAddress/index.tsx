@@ -55,17 +55,17 @@ const ShippingAddress = () => {
 				orderItems: cart,
 			};
 
+			console.log("orderDetails", JSON.stringify(orderDetails, null, 2));
 			const response = await axios.post("/orders", {
 				...orderDetails,
 			});
-			// console.log(response);
+			console.log(response);
 			updateClientSecret(response.data.clientSecret);
 			navigate("/checkout/payment");
 		} catch (error) {
 			console.log(error);
 		}
 	});
-	console.log(errors);
 	const cartTotal = getCartTotal(cart);
 	return (
 		<div className="mt-[82px] mx-[50px]">
@@ -184,7 +184,7 @@ const ShippingAddress = () => {
 						<Button onClick={onSubmit}>CONTINUE TO PAYMENT</Button>
 					</div>
 				</form>
-				<div className="space-y-7">
+				<div className="space-y-7 mb-10">
 					{cart.map((cartItem) => {
 						return (
 							<div className="flex items-start" key={cartItem.id}>
@@ -214,7 +214,7 @@ const ShippingAddress = () => {
 						<Text variant="subheading-three">Free</Text>
 					</div>
 					<div className="mt-[46px] mb-10 h-[1.8px] bg-black"></div>
-					<div className="mt-10 flex justify-between">
+					<div className="my-10 flex justify-between">
 						<Text variant="body-three">Total</Text>
 						<Text variant="subheading-three">$ {cartTotal}</Text>
 					</div>

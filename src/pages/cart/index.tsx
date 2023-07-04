@@ -16,7 +16,7 @@ const Cart = () => {
 			<Text variant="heading-one" className="my-[82px]">
 				Shopping Cart
 			</Text>
-			<div className="space-y-[164px]">
+			<div className="space-y-[112px]">
 				{cart.map((cartItem) => {
 					return (
 						<div className="flex items-start justify-between" key={cartItem.id}>
@@ -24,7 +24,7 @@ const Cart = () => {
 								src={cartItem.image}
 								width={378}
 								height={378}
-								className="w-[378px] h-[378px] rounded-[18px] mr-[46px]"
+								className="w-[378px] h-[378px] rounded-[18px] mr-[100px]"
 								alt=""
 							/>
 							<div className="flex flex-col w-full justify-between">
