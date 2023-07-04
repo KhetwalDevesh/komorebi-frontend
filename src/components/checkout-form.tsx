@@ -12,15 +12,7 @@ import useGlobalStore from "../store";
 export default function CheckoutForm() {
 	const { cart, clientSecret } = useGlobalStore();
 	const stripe = useStripe();
-	// console.log("stripe", JSON.stringify(stripe, null, 2));
 	const elements = useElements();
-	// console.log("elements", JSON.stringify(elements, null, 2));
-
-	// const clientSecret = new URLSearchParams(window.location.search).get(
-	// 	"payment_intent_client_secret"
-	// );
-	// console.log("clientSecret", JSON.stringify(clientSecret, null, 2));
-
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState<string | null | undefined>(null);
 	const [isLoading, setIsLoading] = useState(false);
@@ -29,11 +21,6 @@ export default function CheckoutForm() {
 		if (!stripe) {
 			return;
 		}
-
-		// const clientSecret = new URLSearchParams(window.location.search).get(
-		// 	"payment_intent_client_secret"
-		// );
-		// console.log("clientSecret", JSON.stringify(clientSecret, null, 2));
 		if (!clientSecret) {
 			return;
 		}
