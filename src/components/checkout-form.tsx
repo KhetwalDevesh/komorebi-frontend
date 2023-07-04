@@ -19,7 +19,7 @@ export default function CheckoutForm() {
 	// const clientSecret = new URLSearchParams(window.location.search).get(
 	// 	"payment_intent_client_secret"
 	// );
-	console.log("clientSecret", JSON.stringify(clientSecret, null, 2));
+	// console.log("clientSecret", JSON.stringify(clientSecret, null, 2));
 
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState<string | null | undefined>(null);
@@ -33,7 +33,7 @@ export default function CheckoutForm() {
 		// const clientSecret = new URLSearchParams(window.location.search).get(
 		// 	"payment_intent_client_secret"
 		// );
-		console.log("clientSecret", JSON.stringify(clientSecret, null, 2));
+		// console.log("clientSecret", JSON.stringify(clientSecret, null, 2));
 		if (!clientSecret) {
 			return;
 		}
@@ -48,7 +48,7 @@ export default function CheckoutForm() {
 					setMessage("Your payment is processing.");
 					break;
 				case "requires_payment_method":
-					setMessage("Your payment was not successful, please try again.");
+					setMessage("");
 					break;
 				default:
 					setMessage("Something went wrong.");

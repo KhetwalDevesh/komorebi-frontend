@@ -10,7 +10,9 @@ import { getCartTotal } from "../../helpers";
 // 	"pk_test_51Mg6UGSCB333o0lIZra1AOi4Z2ED7CJHOp9ThNQJjSaBQjm5sLnWv3HXCrNVaAt9Waf947lhmFHxfFnpIeijrrIP002SFfhEao"
 // );
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+const stripePromise = loadStripe(
+	`${import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY}`
+);
 
 console.log(import.meta);
 console.log("stripePromise", JSON.stringify(stripePromise, null, 2));
