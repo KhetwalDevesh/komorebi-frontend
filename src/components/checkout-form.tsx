@@ -59,7 +59,7 @@ export default function CheckoutForm() {
 			elements,
 			confirmParams: {
 				// Make sure to change this to your payment completion page
-				return_url: "https://komorebi-4ccd96.netlify.app/success",
+				return_url: "https://komorebi-frontend.vercel.app/success",
 			},
 		});
 
