@@ -84,7 +84,7 @@ const ProductDetails = () => {
 			</div>
 			<div className="h-[622px] mb-[180px] overflow-hidden relative">
 				<img
-					src=""
+					src="https://res.cloudinary.com/dbspz5tmg/image/upload/v1679743572/youtube/2023/march/komorebi-development/primaryimage_oblfj9.png"
 					alt=""
 					height={622}
 					className="h-[622px] object-cover w-full"
@@ -142,7 +142,7 @@ const ProductDetails = () => {
 			</div>
 			<div className="h-[622px] mb-[180px] overflow-hidden relative">
 				<img
-					src=""
+					src="https://res.cloudinary.com/dbspz5tmg/image/upload/v1679743572/youtube/2023/march/komorebi-development/primaryimage_oblfj9.png"
 					alt=""
 					height={622}
 					className="h-[622px] object-cover w-full"
